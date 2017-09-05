@@ -238,13 +238,13 @@
         this._target.classList.remove('item--dragged');
         this._rects = null;
         this._targetRect = null;
-        this._updateItems();
         this.dispatchEvent(new CustomEvent('sort-finish', {
           composed: true,
           detail: {
             target: this._target
           }
         }));
+        this._updateItems();
         this._target = null;
       }
 
